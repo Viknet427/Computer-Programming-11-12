@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <tabs>
+    <Tab text="Add Friends">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER_RIGHT" layoutX="14.0" layoutY="14.0" prefHeight="333.0" prefWidth="156.0" spacing="14.0">
+                     <children>
+                        <Label text="Name: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Phone #: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Email: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Address: ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" layoutX="170.0" layoutY="14.0" prefHeight="333.0" prefWidth="156.0" spacing="16.0">
+                     <children>
+                        <TextField fx:id="textGetName" promptText="First and Last Name" />
+                        <TextField fx:id="textGetPhone" promptText="Phone Number" />
+                        <TextField fx:id="textGetEmail" promptText="Email" />
+                        <TextField fx:id="textGetAddress" promptText="Address" />
+                     </children>
+                  </VBox>
+                  <Button layoutX="404.0" layoutY="149.0" mnemonicParsing="false" onAction="#addFriend" prefHeight="63.0" prefWidth="103.0" text="Add Friend" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Display Friends">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="friendList" layoutX="14.0" layoutY="13.0" onMouseClicked="#displayFriend" prefHeight="335.0" prefWidth="204.0" />
+                  <Label layoutX="300.0" layoutY="14.0" text="Friend Info">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="244.0" layoutY="93.0" prefWidth="57.0" text="Name: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="244.0" layoutY="120.0" text="Phone #: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="247.0" layoutY="147.0" text="Email: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="245.0" layoutY="174.0" text="Address: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnEditFriend" layoutX="224.0" layoutY="292.0" mnemonicParsing="false" onAction="#editFriend" prefHeight="55.0" prefWidth="114.0" text="Edit Info" />
+                  <Button fx:id="btnDelFriend" layoutX="472.0" layoutY="292.0" mnemonicParsing="false" onAction="#delFriend" prefHeight="55.0" prefWidth="114.0" text="Delete Friend" />
+                  <TextField fx:id="txtName" layoutX="341.0" layoutY="94.0" />
+                  <TextField fx:id="txtPhone" layoutX="341.0" layoutY="121.0" />
+                  <TextField fx:id="txtEmail" layoutX="341.0" layoutY="148.0" />
+                  <TextField fx:id="txtAddress" layoutX="341.0" layoutY="175.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
